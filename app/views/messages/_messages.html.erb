@@ -1,0 +1,5 @@
+<% @messages.each do |message| %>
+  <%= div_for message do %>
+    <span class="badge badge-info"><b><%= message.from %> says:</b> <span class="badge badge-inverse"><%= l message.created_at, :format => "%I:%M%p" %></span><br><span><%= message.content %></span></span>
+  <% end %>
+<% end %>

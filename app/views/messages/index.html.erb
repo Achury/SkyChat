@@ -1,0 +1,22 @@
+<div class="light">
+  <%= content_tag :div, :id => "messages", :"data-url" => messages_path(:format => :js) do%>
+    <%= render "messages" %>
+  <% end %>
+  
+  <div class="center loading" style="display: none"><%= image_tag "spinner.gif" %></div>
+  
+  <hr />
+  
+  <%= form_for PublicMessage.new, :url => messages_path, :remote => true do |f| %>
+    <%= f.text_area :content %>
+    <div class="controls">
+      <button type="submit" class="btn btn-success" type="button">Send</button>
+    </div>
+  <% end %>
+    <script type= "text/javascript">
+    $('#container').blurjs({
+    source: 'body',
+    radius: 30
+    });
+  </script>
+</div>

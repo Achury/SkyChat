@@ -1,0 +1,14 @@
+<div class="center light test">
+  <%= form_tag session_path do %>
+    Please enter your nickname:
+    <%= text_field_tag :nickname %>
+    <button type="submit" class="btn btn-success" type="button">Join chatroom</button>
+  <% end %>
+
+  <script type= "text/javascript">
+  	$('#container').blurjs({
+		source: 'body',
+		radius: 30
+		});
+  </script>
+</div>
