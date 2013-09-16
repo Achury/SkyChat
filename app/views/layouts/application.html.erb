@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang = 'en'>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Chatte Web" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Sky Chat" %></title>
     <%= stylesheet_link_tag "application", :media => "all"%>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tag %>
@@ -20,7 +20,6 @@
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
-
       <%= yield %>
     </div>
   </body>
