@@ -1,5 +1,17 @@
+<span class="badge badge-info" id="welcome">Welcome to SkyChat Writes your text....</span>
 <% @messages.each do |message| %>
   <%= div_for message do %>
-    <span class="badge badge-info"><b><%= message.from %> says:</b> <span class="badge badge-inverse"><%= l message.created_at, :format => "%I:%M%p" %></span><br><span><%= message.content %></span></span>
+    <b><%= message.from %> says:</b> <span class="badge badge-inverse"><%= l message.created_at, :format => "%I:%M%p" %></span><br><span><%= message.content %></span>
   <% end %>
 <% end %>
+<script type= "text/javascript">
+	var count = 1;
+	$(".public_message").each(function(){
+		if(count%2 == 0){
+			$( this ).css("padding-left", "420px");
+			$( this ).css("padding-right", "20px");
+			$( this ).css("text-align", "right");
+		}
+		count++;
+	});
+</script>

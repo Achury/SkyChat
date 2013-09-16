@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #container {
-  width: 75%;
+  width: 55%;
   margin: 0 auto;
   background-color: #EEE;
   padding: 20px 40px;
@@ -100,7 +100,11 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   text-align: right;
   font-weight: bold;
-  color: #92B681;
+  color: #22978E;
+}
+#welcome {
+  margin-left:30px;
+  font-size: 14px;
 }
 
 table.r {
@@ -161,4 +165,5 @@ tt {
 .public_message{
   padding-left:30px;
   padding-top: 10px;
+  width: 230px;
 }
